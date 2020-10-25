@@ -86,6 +86,7 @@ function answerClick() {
     feedback_div.textContent = "Correct"
   }
   questionCount++;
+  getQuestion();
 }
 startBtn_div.onclick = startQuiz;
 
