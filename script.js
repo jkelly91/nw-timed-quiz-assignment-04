@@ -25,19 +25,24 @@ var feedback_div = document.getElementById("feedback")
 // variable that gets submit button
 var submitBtn = document.getElementById("submit")
 
+var returnBtn = document.getElementById("return-home")
+
 // variable gets initials div
 var initials_div = document.getElementById("initials")
 
 // get leaderboard div
 var leaderBoard_div = document.getElementById("leaderboard")
 
+// var gets final score
+var finalScore = document.getElementById("final-score")
+
 // Get Screens
 var startScreen_div = document.getElementById("start-screen")
 var endScreen_div = document.getElementById("end-screen")
 
 // variables to store values
-var score = 0;
 var questionCount = 0;
+
 
 // timer starts when user hits start button
 function setTime() {
@@ -115,24 +120,36 @@ function endGame() {
   questionTitle_div.textContent = "Let's see how you did!"
   endScreen_div.removeAttribute("class")
   questions_div.setAttribute("class", "hide")
-  // choices_div.textContent = "Your Final Score Is "
-  // .append("start-button")
 }
 
 function submitInitials () {
-
   var initials = initials_div.value.trim()
   var userScore = {
+
     score: secondsLeft,
     initials: initials
   };
   var highScores = [] || JSON.parse(window.localStorage.getItem("high-scores"))
+
   highScores.push(userScore);
   window.localStorage.setItem("high-scores", JSON.stringify(highScores))
   endScreen_div.setAttribute('class', "hide")
   leaderBoard_div.removeAttribute("class")
-  userScore.textContent 
+  
+
+  highScores.forEach(function(score) {
+    var liTag = document.createElement("li");
+    liTag.textContent = userScore.initials
+    var listItem = document.getElementById("high-scores")
+    listItem.appendChild(liTag)
+  })
 
 }
+
+function reloadPage() {
+  location.reload();
+}
+
+returnBtn.onclick = reloadPage;
 submitBtn.onclick = submitInitials;
 startBtn_button.onclick = startQuiz;
