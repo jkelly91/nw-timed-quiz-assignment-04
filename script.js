@@ -36,12 +36,16 @@ var leaderBoard_div = document.getElementById("leaderboard")
 // var gets final score
 var finalScore = document.getElementById("final-score")
 
+var phrase = document.getElementById("phrase")
+
 // Get Screens
 var startScreen_div = document.getElementById("start-screen")
 var endScreen_div = document.getElementById("end-screen")
 
 // variables to store values
 var questionCount = 0;
+
+var incorrect = 10;
 
 
 // timer starts when user hits start button
@@ -51,9 +55,11 @@ function setTime() {
     secondsLeft--;
     timer.textContent = "";
     timer.textContent = "Timer: " + secondsLeft;
+
     if (secondsLeft === 0 || questionCount === questions.length) {
-      endGame();
       clearInterval(timerInterval);
+      endGame();
+
     }
 
 
@@ -65,8 +71,8 @@ function startQuiz() {
 
   setTime()
   startBtn_button.setAttribute("class", "hide")
-  // startBtn_button.remove()
-  // pTag_p.remove()
+  phrase.setAttribute("class", "hide")
+
   getQuestion()
 
 }
@@ -93,6 +99,7 @@ function getQuestion() {
 // verifies if answer is correct or not
 function answerClick() {
   if (this.value !== questions[questionCount].answer) {
+    secondsLeft = secondsLeft - 10
     feedback_div.textContent = "Incorrect"
   }
   else {
@@ -107,7 +114,7 @@ function answerClick() {
   questionCount++;
 
   if (questionCount === questions.length) {
-    endGame();
+    setTimeout(function(){endGame();}, 1000);
   }
   else {
     getQuestion();
@@ -120,6 +127,7 @@ function endGame() {
   questionTitle_div.textContent = "Let's see how you did!"
   endScreen_div.removeAttribute("class")
   questions_div.setAttribute("class", "hide")
+  finalScore.textContent = "Your Score: " + secondsLeft
 }
 
 function submitInitials () {
@@ -129,13 +137,14 @@ function submitInitials () {
     score: secondsLeft,
     initials: initials
   };
-  var highScores = [] || JSON.parse(window.localStorage.getItem("high-scores"))
 
+  var highScores = [] || JSON.parse(window.localStorage.getItem("high-scores"))
   highScores.push(userScore);
+
   window.localStorage.setItem("high-scores", JSON.stringify(highScores))
   endScreen_div.setAttribute('class', "hide")
   leaderBoard_div.removeAttribute("class")
-  
+
 
   highScores.forEach(function(score) {
     var liTag = document.createElement("li");

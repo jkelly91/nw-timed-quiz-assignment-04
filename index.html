@@ -17,7 +17,7 @@
   <!-- container that shows the start screen  -->
     <div id="start-screen" class="start">
       <h1>Javascript Quiz</h1>
-      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! </p>
+      <p id="phrase">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! </p>
       <button id="start-button" type="button" >Start Quiz</button>
 
       <!-- question's display here  -->
@@ -30,7 +30,7 @@
       <!-- end screen -->
       <div id="end-screen" class="hide">
         <h4>Let's see how you did!</h4>
-        <p>Score: <span id="final-score"></span></p>
+        <div id="final-score"> Score: </div>
         <p>Enter Initials: <input type="text" id="initials"></p>
         <button id="submit">Submit</button>
       </div>

@@ -2,7 +2,7 @@
   /* margin: 0;
   padding: 0; */
   box-sizing: border-box;
-
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #timer {
@@ -10,21 +10,26 @@
   font-weight: 900;
   font-size: x-large;
 
+}
 
+p {
+  font-weight: 800;
+}
+
+body {
+  background-color: rgba(8, 92, 189, 0.411); */
 }
 
 h1, #feedback {
   text-align: center;
-  /* margin: 25px 0px 50px; */
+  margin-top: 50px;
 }
 .container {
-  position: relative;
-  padding: 10px 20px;
   color: whitesmoke;
   font-size: 16px;
   margin-top: 40px;
   letter-spacing: 4px;
-  background: rgba(0,0,0,.5);
+  background: rgba(100, 68, 49, 0.418);
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 4px;
   display: flex;
@@ -47,8 +52,16 @@ h1, #feedback {
 button {
   display: block;
   margin: auto;
+  width: 125px;
+  height: 50px;
+  border-radius: 4px;
 }
 
 .hide {
   display: none;
+}
+
+#end-screen, h5, #high-scores {
+  font-weight: 900;
+  font-size: 20px;
 }
