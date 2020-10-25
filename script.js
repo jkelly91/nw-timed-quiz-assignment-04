@@ -109,12 +109,12 @@ function answerClick() {
   feedback_div.setAttribute("class", "feedback");
   setTimeout(function() {
     feedback_div.setAttribute("class", "feedback hide");
-  }, 1000);
+  }, 1200);
 
   questionCount++;
 
   if (questionCount === questions.length) {
-    setTimeout(function(){endGame();}, 1000);
+    endGame()
   }
   else {
     getQuestion();
@@ -124,10 +124,16 @@ function answerClick() {
 }
 
 function endGame() {
-  questionTitle_div.textContent = "Let's see how you did!"
-  endScreen_div.removeAttribute("class")
-  questions_div.setAttribute("class", "hide")
-  finalScore.textContent = "Your Score: " + secondsLeft
+
+  setTimeout(() => {
+
+    questionTitle_div.textContent = "Let's see how you did!"
+    endScreen_div.removeAttribute("class")
+    questions_div.setAttribute("class", "hide")
+    finalScore.textContent = "Your Score: " + secondsLeft
+
+  }, 1200);
+
 }
 
 function submitInitials () {
