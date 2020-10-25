@@ -1,31 +1,31 @@
 var questions = [
   {
-    title: "Which built-in method combines the text of two strings and returns a new string?",
-    choice: ["A - append()", "B - concat()", "C - attach()", "D - None of the above."],
-    answer: ".length"
+    title: "Q 1 - Which built-in method combines the text of two strings and returns a new string?",
+    choices: ["A - append()", "B - concat()", "C - attach()", "D - None of the above."],
+    answer: "B - concat()"
   },
 
   {
-    title: "Within a loop, the 'break' keyword may be used to do what?",
-    multiChoice: ["break your competitors code", "exit the loop immediately", "repeat the loop", "indicate a stopping condition"],
-    answer: "exit the loop immediately"
+    title: "Q 2 - Which built-in method returns the calling string value converted to upper case?",
+    choices: ["A - toUpperCase()", "B - toUpper()", "C - changeCase(case)", "D - None of the above."],
+    answer: "A - toUpperCase()"
   },
 
   {
-    title: "Properties in a JavaScript oject are often refferred to as what?",
-    multiChoice: ["dot walking", "key-value pairs", "nested properties", "undefined"],
-    answer: "key-value pairs"
+    title: "Q 3 - How can you get the total number of arguments passed to a function?",
+    choices: ["A - Using args.length property", "B - Using arguments.length property", "C - Both of the above.", "D - None of the above."],
+    answer: "B - Using arguments.length property"
   },
 
   {
-    title: "Which array method inserts an element at the end of the array?",
-    multiChoice: [".pop()", ".push()", ".length", ".join()"],
-    answer: ".push()"
+    title: "Q 4 - Which of the following function of Array object applies a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value?",
+    choices: [".pop()", ".push()", "C - reduce()", "D - reduceRight()"],
+    answer: "C - reduce()"
   },
 
   {
-    title: "What is a callback function?",
-    multiChoice: ["a function that accepts an array as an argument", "I function that performs an HTTP request", "a data type similar to a string or a boolean", "a function that is passed into another function as an argument"],
-    answer: "a function that is passed into another function as an argument"
+    title: "Q 5 - Which of the following function of Array object applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value?",
+    choices: [".pop()", ".push()", "C - reduce()", "D - reduceRight()"],
+    answer: "D - reduceRight()"
   }
 ];
