@@ -1,5 +1,5 @@
 // variable that displays the seconds left
-var secondsLeft = 76;
+var secondsLeft = 61;
 
 // element that displays time
 var timer = document.getElementById("timer");
@@ -8,7 +8,7 @@ var timer = document.getElementById("timer");
 var scores_div = document.getElementById("scores-div");
 
 // start button
-var startBtn_div = document.getElementById("start-button");
+var startButton = document.getElementById("start-button");
 
 // variable for question title
 var questionTitle_div = document.getElementById("question-title");
@@ -22,7 +22,12 @@ var choices_div = document.getElementById("choices");
 // variable that gets feedback div
 var feedback_div = document.getElementById("feedback")
 
-var pTag_p = document.querySelector("p");
+// variable that gets submit button
+var submitBtn = document.getElementById("submit")
+// Get Screens
+var startScreen_div = document.getElementById("start-screen")
+var endScreen_div = document.getElementById("end-screen")
+
 // variables to store values
 var score = 0;
 var questionCount = 0;
@@ -36,9 +41,10 @@ function setTime() {
     timer.textContent = "";
     timer.textContent = "Timer: " + secondsLeft;
     if (secondsLeft === 0 || questionCount === questions.length) {
+      endGame();
       clearInterval(timerInterval);
-
     }
+
 
   }, 1000);
 }
@@ -47,18 +53,16 @@ function setTime() {
 function startQuiz() {
 
   setTime()
-  startBtn_div.remove()
-  pTag_p.remove()
-
-
-  for (var i =0; i < questions.length; i++) {
-  }
-  getQuestion();
+ startButton.setAttribute("class", "hide")
+  // startButton.remove()
+  // pTag_p.remove()
+  getQuestion()
 
 }
 // get questions to the page
 function getQuestion() {
 
+  questions_div.removeAttribute("class")
   var currentQuestion = questions[questionCount];
   questionTitle_div.textContent = currentQuestion.title;
 
@@ -86,11 +90,11 @@ function answerClick() {
 
   feedback_div.setAttribute("class", "feedback");
   setTimeout(function() {
-    console.log("hello")
     feedback_div.setAttribute("class", "feedback hide");
   }, 1000);
 
   questionCount++;
+
   if (questionCount === questions.length) {
     endGame();
   }
@@ -103,8 +107,15 @@ function answerClick() {
 
 function endGame() {
   questionTitle_div.textContent = "Let's see how you did!"
+  endScreen_div.removeAttribute("class")
+  questions_div.setAttribute("class", "hide")
   // choices_div.textContent = "Your Final Score Is "
   // .append("start-button")
 }
-startBtn_div.onclick = startQuiz;
 
+function submitInitials () {
+
+
+}
+submitBtn.onclick = submitInitials;
+startButton.onclick = startQuiz;

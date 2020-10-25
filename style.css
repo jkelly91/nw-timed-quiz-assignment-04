@@ -38,3 +38,7 @@ button {
   display: block;
   margin: auto;
 }
+
+.hide {
+  display: none;
+}

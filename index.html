@@ -19,14 +19,29 @@
     <div id="start-screen" class="start">
       <h1>Javascript Quiz</h1>
       <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! </p>
-      <button id="start-button" type="button" value="Start Quiz">Start Quiz</button>
+      <button id="start-button" type="button" >Start Quiz</button>
 
       <!-- question's display here  -->
       <div id="questions-div" class="hide">
         <h3 id="question-title"></h3>
         <div id="choices"></div>
       </div>
+      <!-- feedback display is correct or wrong -->
       <div id="feedback" class="hide"></div>
+      <!-- end screen -->
+      <div id="end-screen" class="hide">
+        <h4>Let's see how you did!</h4>
+        <p>Score: <span id="final-score"></span></p>
+        <p>Enter Initials: <input type="text" id="initials"></p>
+        <button id="submit">Submit</button>
+      </div>
+      <!-- leaderboard div -->
+      <div id="leaderboard" class="hide">
+        <h5>Scores</h5>
+        <ol id="high-scores"></ol>
+        <button id="return-home"></button>
+
+      </div>
     </div>
   </div>
 
