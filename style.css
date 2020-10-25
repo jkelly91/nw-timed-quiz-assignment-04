@@ -1,0 +1,40 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+
+}
+
+span {
+  position: absolute;
+  left: right;
+}
+
+h1, #feedback {
+  text-align: center;
+  /* margin: 25px 0px 50px; */
+}
+.container {
+  background: beige;
+  border-radius: 4px;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin: auto;
+  /* padding: 50px 20px; */
+  position: relative;
+}
+
+.choice {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: left;
+  margin: 10px auto;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
