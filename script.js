@@ -44,7 +44,6 @@ function setTime() {
 }
 
 // Quiz is started on button click
-
 function startQuiz() {
 
   setTime()
@@ -53,12 +52,11 @@ function startQuiz() {
 
 
   for (var i =0; i < questions.length; i++) {
-    console.log(questions[0].choices[i])
   }
   getQuestion();
 
 }
-
+// get questions to the page
 function getQuestion() {
 
   var currentQuestion = questions[questionCount];
@@ -77,7 +75,7 @@ function getQuestion() {
 
   })
 }
-
+// verifies if answer is correct or not
 function answerClick() {
   if (this.value !== questions[questionCount].answer) {
     feedback_div.textContent = "Incorrect"
@@ -85,8 +83,28 @@ function answerClick() {
   else {
     feedback_div.textContent = "Correct"
   }
+
+  feedback_div.setAttribute("class", "feedback");
+  setTimeout(function() {
+    console.log("hello")
+    feedback_div.setAttribute("class", "feedback hide");
+  }, 1000);
+
   questionCount++;
-  getQuestion();
+  if (questionCount === questions.length) {
+    endGame();
+  }
+  else {
+    getQuestion();
+  }
+
+
+}
+
+function endGame() {
+  questionTitle_div.textContent = "Let's see how you did!"
+  // choices_div.textContent = "Your Final Score Is "
+  // .append("start-button")
 }
 startBtn_div.onclick = startQuiz;
 
