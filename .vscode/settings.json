@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": false,
+    "**/.idea": true,
+    "**/.svn": true,
+    "**/.vscode": false,
+    "**/node_modules": true,
+    "**/tmp": true,
+    "**/yarn.lock": true
+  }
+}
