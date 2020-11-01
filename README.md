@@ -27,25 +27,17 @@ Acceptance Criteria
 
 1. Follow this LINK
 https://jkelly91.github.io/nw-timed-quiz-assignment-04/
-
-
 2. Press start button to start quiz and the timer of 60 seconds will start
-
 ![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/times-quiz-png-01.png)
 3. Read questions and choose between multiple answers
 4. If the incorrect answer is chosen you will see the text 'incorrect' displayed
-
 ![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/timed-quiz-incorrect-png-02.png)
 5. If the correct answer is chosen you will see the text 'correct' displayed
-
 ![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/timed-quiz-png-03.png)
 6. Once you have finished your quiz put your initials in and hit submit
-
 ![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/timed-quiz-initials-png-04.png)
 7. to return to the first page press the return button
-
 ![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/timed-quiz-return-png-05.png)
-
 
 
 ## Contributing
