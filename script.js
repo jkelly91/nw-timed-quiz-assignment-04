@@ -1,5 +1,5 @@
 // variable that displays the seconds left
-var secondsLeft = 5;
+var secondsLeft = 61;
 
 // element that displays time
 var timer = document.getElementById("timer");
