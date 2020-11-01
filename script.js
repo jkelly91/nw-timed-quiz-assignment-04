@@ -1,5 +1,5 @@
 // variable that displays the seconds left
-var secondsLeft = 61;
+var secondsLeft = 5;
 
 // element that displays time
 var timer = document.getElementById("timer");
@@ -53,7 +53,12 @@ function setTime() {
     if (secondsLeft === 0 || questionCount === questions.length) {
       clearInterval(timerInterval);
       endGame();
-
+    }
+    else if (secondsLeft < 0) {
+      secondsLeft = 0
+      timer.textContent = "Timer: " + secondsLeft;
+      clearInterval(timerInterval);
+      endGame();
     }
 
 
