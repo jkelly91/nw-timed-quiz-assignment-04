@@ -2,7 +2,8 @@
 
 ## Description
 
-This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code.
+This app is a timed quiz that runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code.
+
 
 
 
@@ -16,9 +17,8 @@ Languages used
 
 Acceptance Criteria
 
-- Button click to generate password
-- Parameters to adjust password criteria
-- Validation
+- Deployable application
+- hassle free navigation
 - Ease of navigation
 - Deployed to github
 
@@ -38,7 +38,7 @@ https://jkelly91.github.io/nw-password-generator-assignment-03/
 6. Confirm Lower Case (Recommended)
 7. Confirm Upper Case (Recommended)
 
-![Example of Password generator](https://github.com/jkelly91/nw-password-generator-assignment-03/blob/main/images/03-javascript-homework-demo.png?raw=true)
+![Example of quiz](https://github.com/jkelly91/nw-password-generator-assignment-03/blob/main/images/03-javascript-homework-demo.png?raw=true)
 
 
 
