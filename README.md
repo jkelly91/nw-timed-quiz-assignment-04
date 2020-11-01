@@ -35,7 +35,7 @@ https://jkelly91.github.io/nw-timed-quiz-assignment-04/
 3. Read questions and choose between multiple answers
 4. If the incorrect answer is chosen you will see the text 'incorrect' displayed
 
-![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/times-quiz-png-01.png)
+![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/timed-quiz-incorrect-png-02.png)
 5. If the correct answer is chosen you will see the text 'correct' displayed
 
 ![Example of quiz](https://github.com/jkelly91/nw-timed-quiz-assignment-04/blob/main/images/timed-quiz-png-03.png)
